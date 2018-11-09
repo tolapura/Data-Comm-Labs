@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/Chart.min.js"></script>
+    <script src="js/vue.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid navbar">
+        <div class="container">
+            <p>CMSC 137 Data Communications and Networking</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="box-tab-container">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 box-tab-menu">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item active text-center">
+                  <p class="labtag">1</p>Fourier Series
+                </a>
+                        <a href="#" class="list-group-item text-center">
+                  <p class="labtag">2</p>RZ, NRZ-L, and NRZ-I Encoding
+            </a>
+            <a href="#" class="list-group-item text-center">
+                  <p class="labtag">3</p>Wired and Wireless Network Devices
+            </a>
+            <a href="#" class="list-group-item text-center">
+                  <p class="labtag">4</p>Digital Modulation Schemes
+            </a>
+            <a href="#" class="list-group-item text-center">
+                 <p class="labtag">5</p>Hamming Code
+            </a>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 box-tab">
+                    <div class="box-tab-content active">
+                        <div class="fourier">
+                            <p>10 Harmonics</p>
+                            <img src="img/10.jpg" alt="harmonics-10">
+                        </div>
+                        <div class="fourier">
+                            <p>15 Harmonics</p>
+                            <img src="img/15.jpg" alt="harmonics-15">
+                        </div>
+                        <div class="fourier">
+                            <p>50 Harmonics</p>
+                            <img src="img/50.jpg" alt="harmonics-50">
+                        </div>
+                    </div>
+                    <div class="box-tab-content" id="app">
+
+                        <input type="text" v-model="input" name="input">
+                        <button id="btn" class="btn" v-on:click="generate">Generate</button>
+
+                        <p class="title">RZ</p>
+                        <canvas id="rz" width="810" height="150"></canvas>
+                        <p class="title">NRZ-L</p>
+                        <canvas id="nrz-l" width="810" height="150"></canvas>
+                        <p class="title">NRZ-I</p>
+                        <canvas id="nrz-i" width="810" height="150"></canvas>
+                    </div>
+                    <div class="box-tab-content">
+                    </div>
+                    <div class="box-tab-content">
+                    </div>
+                    <div class="box-tab-content">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
